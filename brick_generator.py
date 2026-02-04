@@ -5,11 +5,21 @@ SIZE = 1024
 image = Image.new("L", (SIZE, SIZE))
 pixels = image.load()
 
-BRICKS_X = 3
-BRICKS_Y = 8
+BRICKS_X = 5
+BRICKS_Y = 15
 
-MARGIN_X = 0.005 * BRICKS_X
-MARGIN_Y = 0.005 * BRICKS_Y
+brick_px_w = SIZE / BRICKS_X
+brick_px_h = SIZE / BRICKS_Y
+
+min_brick_px = min(brick_px_w, brick_px_h)
+
+MORTAR_RATIO = 0.025
+MORTAR_PX = min_brick_px * MORTAR_RATIO
+
+MARGIN_X = MORTAR_PX / brick_px_w
+MARGIN_Y = MORTAR_PX / brick_px_h
+
+
 
 for y in range(SIZE):
     for x in range(SIZE):
