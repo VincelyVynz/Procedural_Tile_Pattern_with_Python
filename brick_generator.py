@@ -6,7 +6,7 @@ image = Image.new("L", (SIZE, SIZE))
 pixels = image.load()
 
 BRICKS_X = 5
-BRICKS_Y = 15
+BRICKS_Y = 8
 
 brick_px_w = SIZE / BRICKS_X
 brick_px_h = SIZE / BRICKS_Y
