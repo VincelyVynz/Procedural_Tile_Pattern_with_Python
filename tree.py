@@ -1,7 +1,7 @@
 from turtle import *
 
 shape("turtle")
-speed(1)
+speed(0.5)
 left(90)
 pensize(2)
 
@@ -25,4 +25,6 @@ def tree(length, level, angle):
     right(angle)
     backward(length)
 
-tree(80, 7, 30)
+tree(75, 7, 30)
+
+mainloop()
